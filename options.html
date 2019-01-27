@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/options.js"></script>
+    <link href="css/materialize.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Gotify</title>
+</head>
+
+<body>
+    <div class="gotify-container">
+        <div class="title-container">
+            <div class="title">Gotify</div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Options</span>
+                            <div>
+                                <form>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="gotify-url" type="text" class="validate">
+                                            <label for="gotify-url">Gotify URL including /message. Example: https://gotify.net/message</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="app-token" type="text" class="validate">
+                                            <label for="app-token">App Token</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="bottom-controls">
+                                            <button id="save-options" class="waves-effect waves-light btn btn-primary">Save
+                                                <i class="material-icons right">save</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

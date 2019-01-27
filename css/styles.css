@@ -1,0 +1,92 @@
+body {
+    background-color: #fafafa;
+    color: #222;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    height: 275px;
+    min-width: 700px;
+    padding: 8px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea {
+    color: #000000;
+}
+
+label {
+    color: #ffbe00;
+}
+
+.bottom-controls {
+    margin-top: 24px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-color: #3f51b5 !important;
+    border-color: #3f51b5 !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none !important;
+}
+
+.btn-primary .badge {
+    background-color: #ffffff !important;
+    color: #0041FF !important;
+}
+
+.character-count, #result {
+    float: right;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.panel-body {
+    padding: 16px 32px;
+}
+
+.panel-primary {
+    border-color: #0041ff;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #0041ff;
+}
+
+.pushpush-container {
+    margin: 8px;
+}
+
+.title {
+    color: #3498db;
+    flex-grow: 1;
+    font-size: 5vw;
+    font-weight: 300;
+}
+
+.title-container {
+    display: flex;
+}
+
+.top-button {
+    margin: 8px;
+}
+
+#clear-all-notifications-link, #options-link, #popout-link {
+    cursor: pointer;
+    right: 0;
+}

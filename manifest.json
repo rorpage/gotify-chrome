@@ -17,7 +17,6 @@
     "scripts": [
       "js/gotify.js",
       "js/http.js",
-      "js/local.js",
       "js/jquery-2.2.0.min.js",
       "js/materialize.min.js",
       "js/background.js",

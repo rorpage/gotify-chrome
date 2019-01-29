@@ -14,14 +14,47 @@ gotify.getCurrentTabUrl = function (info, tab, callback, done) {
 };
 
 gotify.buildMenu = function () {
-    var parentMenu = chrome.contextMenus.create({ "title": "Gotify" });
+    chrome.contextMenus.create({
+        title: "Send this page",
+        contexts: ["page"],
+        onclick: function (info, tab) {
+            gotify.getCurrentTabUrl(info, tab, gotify.postMessage, function (message) {
+                gotify.log('Done!');
+            });
+        }
+    });
 
     chrome.contextMenus.create({
-        "parentId": parentMenu,
-        "title": "Push this page",
-        "contexts": ["all"],
-        "onclick": function (info, tab) {
-            gotify.getCurrentTabUrl(info, tab, gotify.postMessage, function (message) {
+        title: "Send selected text",
+        contexts: ["selection"],
+        onclick: function (text) {
+            var message = text.selectionText;
+            var object = gotify.buildMessageObject('Selected text', message);
+            gotify.postMessage(object, function () {
+                gotify.log('Done!');
+            });
+        }
+    });
+
+    chrome.contextMenus.create({
+        title: "Send image URL",
+        contexts: ["image"],
+        onclick: function (image) {
+            var message = image.srcUrl;
+            var object = gotify.buildMessageObject('Image URL', message);
+            gotify.postMessage(object, function () {
+                gotify.log('Done!');
+            });
+        }
+    });
+
+    chrome.contextMenus.create({
+        title: "Send link",
+        contexts: ["link"],
+        onclick: function (link) {
+            var message = link.linkUrl;
+            var object = gotify.buildMessageObject('Link URL', message);
+            gotify.postMessage(object, function () {
                 gotify.log('Done!');
             });
         }
